@@ -1,0 +1,14 @@
+@BASE_URL = http://localhost:3000
+
+### Test if the API is reachable
+GET {{BASE_URL}}
+
+### Create a task (Adding two numbers)
+POST {{BASE_URL}}/add?x=3&y=4
+
+### Create a task (Sleeping for 20 seconds)
+POST {{BASE_URL}}/sleep?seconds=15
+
+### Get the status of the task
+@task_id = 470d153c-7e9c-48f6-afd7-4031b145ab0b
+GET {{BASE_URL}}/status/{{task_id}}
